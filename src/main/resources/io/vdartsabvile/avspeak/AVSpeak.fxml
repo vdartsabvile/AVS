@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Pos?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.Region?>
+<BorderPane xmlns:fx="http://javafx.com/javafx"
+            fx:controller="io.vdartsabvile.avspeak.MainApp">
+
+    <!-- Верхняя панель с иконкой, текстом и кнопками -->
+    <top>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10;">
+            <ImageView fx:id="iconView" fitWidth="34.0" fitHeight="34.0" />
+            <Label text="AVSpeak" style="-fx-font-family: 'Secession [by me]'; -fx-font-size: 38px; -fx-font-weight: normal;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="−" fx:id="minimizeButton" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 50px; -fx-min-height: 40px;"/>
+            <Button text="✖" fx:id="closeButton" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 50px; -fx-min-height: 40px;"/>
+        </HBox>
+    </top>
+
+    <!-- Центральная часть с логотипом и кнопками входа -->
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <HBox alignment="CENTER" spacing="10.0">
+                <ImageView fx:id="logoView" fitWidth="302.0" fitHeight="302.0"/>
+                <Label text="AVSpeak" style="-fx-font-family: 'Secession [by me]'; -fx-font-size: 200px;"/>
+            </HBox>
+            <Label text="Добро пожаловать, пожалуйста выполните:"/>
+            <Button text="Вход" fx:id="loginButton" />
+            <Button text="Регистрация" fx:id="registerButton" />
+        </VBox>
+    </center>
+
+    <!-- Правая панель с кнопками и аватаром -->
+    <right>
+        <VBox spacing="20.0" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #333;">
+            <Label text="Сохраненные сервера" />
+            <ComboBox fx:id="serverComboBox"/>
+            <Line startX="0.0" endX="300.0" stroke="WHITE" strokeWidth="2.0"/>
+            <Button text="Подключиться к серверу" fx:id="connectButton"/>
+            <Button text="Создать сервер" fx:id="createServerButton"/>
+            <StackPane fx:id="smallAvatarWrapper">
+                <Circle fx:id="smallBackgroundCircle" radius="45.0" fill="GRAY"/>
+                <ImageView fx:id="smallAvatarImageView" fitWidth="80.0" fitHeight="80.0"/>
+            </StackPane>
+            <Label text="Имя пользователя" fx:id="smallUserNameLabel" />
+            <Button text="Настройки" fx:id="settingsButton"/>
+        </VBox>
+    </right>
+</BorderPane>

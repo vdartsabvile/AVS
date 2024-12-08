@@ -1,0 +1,121 @@
+/* styles.css */
+
+.root {
+    -fx-background-color: rgba(28, 28, 30, 0.995); /* Прозрачный белый фон */
+    -fx-background-image: url("patternsOP2.png");
+    -fx-background-size: auto;
+    -fx-background-repeat: repeat;
+
+}
+
+.buttonn {
+    -fx-background-radius: 8; /* Закругление углов кнопок */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 16, 0, 0, 0);
+
+}
+
+
+.chat-area {
+    -fx-background-color: #ffffff; /* Фоновый цвет */
+    -fx-border-color: #888888; /* Цвет обводки */
+    -fx-border-width: 2px; /* Толщина обводки */
+    -fx-border-radius: 5px; /* Скругление углов */
+
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.5, 2, 2); /* Внутренняя тень */
+    -fx-padding: 10px; /* Внутренние отступы */
+    -fx-background-radius: 5px; /* Скругление фона */
+}
+
+
+.title-bar {
+    -fx-background-color: #333;
+    -fx-padding: 5;
+}
+
+.avatar-wrapper {
+    -fx-transition: opacity 0.3s;
+}
+
+.avatar-wrapper:hover {
+    -fx-opacity: 0.8;
+}
+.line {
+    -fx-stroke: gray; /* Цвет линии */
+    -fx-stroke-width: 2; /* Толщина линии */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+.rightPanel {
+    -fx-background-radius: 9px; /* Закругление фона */
+    -fx-padding: 20;
+    -fx-background-color: rgba(51, 51, 51, 0.95);
+    -fx-alignment: center;
+    -fx-min-width: 364px;
+}
+.AVSpeak {
+    -fx-font-family: "Secession [by me]";
+}
+* {
+    -fx-font-family: "Geologica Roman";
+}
+/* Стили для кнопок */
+.Rbutton {
+    -fx-font-family: 'Geologica Roman';
+    -fx-padding: 1em;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px; /* Закругление углов кнопок */
+    -fx-cursor: hand;
+    -fx-position: relative;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+   -fx-min-width: 300px;  /* Минимальная ширина */
+    -fx-min-height: 75px;  /* Минимальная высота */
+    -fx-pref-width: 300px; /* Предпочтительная ширина */
+    -fx-pref-height: 75px; /* Предпочтительная высота */
+    -fx-max-width: 300px;  /* Максимальная ширина */
+    -fx-max-height: 80px;  /* Максимальная высота */
+    -fx-font-size: 20px;
+}
+.Rbutton:hover {
+    -fx-border-color: #06f;
+}
+
+.Rbutton:pressed {
+    -fx-border-color: #06f;
+}
+.combo-box-base {
+    -fx-border-color: transparent; /* Remove initial border color */
+}
+
+.combo-box-base:hover {
+    -fx-border-color: #06f; /* Add hover border color */
+}
+
+.combo-box-base:hover .list-cell {
+    -fx-opacity: 0.8; /* Apply opacity to list cells on hover */
+}
+
+.buttonn {
+    -fx-padding: 1em;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px; /* Закругление углов кнопок */
+    -fx-cursor: hand;
+    -fx-position: relative;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.16), 10, 0, 0, 0);
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+.savedd {
+    -fx-padding: 1em;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.16), 10, 0, 0, 0);
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+/* Псевдоэлементы и эффекты наведения */
+.buttonn:hover {
+    -fx-background-color: linear-gradient(to right, #021B79, #0575E6);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+    -fx-opacity: 1.0; /* Устанавливаем полную непрозрачность при наведении */
+}
